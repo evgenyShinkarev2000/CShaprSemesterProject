@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ICSharpCode.SharpZipLib.Zip;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,8 @@ namespace Archivator
 {
     public interface IArchivator
     {
-        public void Compress(string sourceDirectoryRoute, string targetRoute);
-        public void Decompress(string compressedDirectoryRoute, string targetoute);
+        public void Compress(string sourceRoute, string targetRoute);
+        public void Compress(IEnumerable<ZipEntryFile> zipEntryFiles, ZipOutputStream zipOutputStream);
+        public void Decompress(ZipFile zipFile, string outDirectoryPath);
     }
 }
