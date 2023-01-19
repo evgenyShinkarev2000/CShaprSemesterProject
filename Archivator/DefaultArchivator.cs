@@ -64,8 +64,9 @@ namespace Archivator
             }
         }
 
-        public void Decompress(ZipFile zipFile, string outDirectoryPath)
+        public void Decompress(string sourceFile, string outDirectoryPath)
         {
+            var zipFile = new ZipFile(sourceFile);
             foreach (ZipEntry zipEntry in zipFile)
             {
                 var targetPath = Path.Combine(outDirectoryPath, ZipEntry.CleanName(zipEntry.Name));
@@ -93,7 +94,7 @@ namespace Archivator
             var zipEntries = BuildAcrhiveTree(sourceRoute);
             var prefixDirectories = Path.GetDirectoryName(targetRoute);
 
-            if (prefixDirectories != null)
+            if (prefixDirectories != null && prefixDirectories!="")
             {
                 Directory.CreateDirectory(prefixDirectories);
             }

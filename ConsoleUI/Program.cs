@@ -14,7 +14,7 @@ namespace ConsoleUI
             var archivesRoute = @"C:\projects\CSharp\CShaprSemesterProject\ConsoleUI\samples\Archives\FirstArchive.zip";
             var decompressedRoute = @"C:\projects\CSharp\CShaprSemesterProject\ConsoleUI\samples\Decompressed";
             archivator.Compress(sourceRoute, archivesRoute);
-            archivator.Decompress(new ZipFile(File.OpenRead(archivesRoute)), decompressedRoute);
+            archivator.Decompress(archivesRoute, decompressedRoute);
         }
     }
 }

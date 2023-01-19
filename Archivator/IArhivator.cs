@@ -10,7 +10,7 @@ namespace Archivator
     public interface IArchivator
     {
         public void Compress(string sourceRoute, string targetRoute);
-        public void Compress(IEnumerable<ZipEntryFile> zipEntryFiles, ZipOutputStream zipOutputStream);
-        public void Decompress(ZipFile zipFile, string outDirectoryPath);
+       
+        public void Decompress(string sourceRoute, string outDirectoryPath);
     }
 }
