@@ -364,4 +364,6 @@ FodyWeavers.xsd
 
 # Cutom
 ServerAPI\Mocks\
-
+ConsoleUI\samples\Archives
+ConsoleUI\samples\Decompressed
+ConsoleUI\samples\Sources
