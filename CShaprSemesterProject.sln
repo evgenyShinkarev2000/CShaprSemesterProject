@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleUI", "ConsoleUI\Cons
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{923185DD-C41C-4B5E-A200-4EC89BAF7FD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerAPI", "ServerAPI\ServerAPI.csproj", "{44721208-274E-4144-8689-3CB79F071477}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerAPI", "ServerAPI\ServerAPI.csproj", "{44721208-274E-4144-8689-3CB79F071477}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelegramBot", "TelegramBot\TelegramBot.csproj", "{F73BC1CE-1655-46EF-B08A-073F4ABEDF3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,18 @@ Global
 		{44721208-274E-4144-8689-3CB79F071477}.Release|x64.Build.0 = Release|Any CPU
 		{44721208-274E-4144-8689-3CB79F071477}.Release|x86.ActiveCfg = Release|Any CPU
 		{44721208-274E-4144-8689-3CB79F071477}.Release|x86.Build.0 = Release|Any CPU
+		{F73BC1CE-1655-46EF-B08A-073F4ABEDF3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F73BC1CE-1655-46EF-B08A-073F4ABEDF3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F73BC1CE-1655-46EF-B08A-073F4ABEDF3F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F73BC1CE-1655-46EF-B08A-073F4ABEDF3F}.Debug|x64.Build.0 = Debug|Any CPU
+		{F73BC1CE-1655-46EF-B08A-073F4ABEDF3F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F73BC1CE-1655-46EF-B08A-073F4ABEDF3F}.Debug|x86.Build.0 = Debug|Any CPU
+		{F73BC1CE-1655-46EF-B08A-073F4ABEDF3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F73BC1CE-1655-46EF-B08A-073F4ABEDF3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F73BC1CE-1655-46EF-B08A-073F4ABEDF3F}.Release|x64.ActiveCfg = Release|Any CPU
+		{F73BC1CE-1655-46EF-B08A-073F4ABEDF3F}.Release|x64.Build.0 = Release|Any CPU
+		{F73BC1CE-1655-46EF-B08A-073F4ABEDF3F}.Release|x86.ActiveCfg = Release|Any CPU
+		{F73BC1CE-1655-46EF-B08A-073F4ABEDF3F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
