@@ -27,4 +27,5 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :-------------------------------------- 
 reg delete HKEY_CLASSES_ROOT\*\shell\MyCustomArhivator /f
-reg delete HKEY_CLASSES_ROOT\.myrar /f
+reg delete HKEY_CLASSES_ROOT\.zip\shell\MyCustomArhivator /f
+reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\MyCustomArhivator /f
