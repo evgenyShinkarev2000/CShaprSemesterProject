@@ -12,6 +12,7 @@ namespace Archivator
 {
     public class DefaultArchivator : IArchivator
     {
+        private List<IEnumerable<ZipEntryFile>> entries = new List<IEnumerable<ZipEntryFile>>();
         public IEnumerable<ZipEntryFile> BuildAcrhiveTree(string sourceRoute)
         {
             if (File.Exists(sourceRoute))
@@ -83,15 +84,18 @@ namespace Archivator
                 }
             }
         }
-
-        public void Compress(string sourceRoute, string targetRoute)
+        public void AddToArchive(string sourceRoute)
         {
-            if (!File.Exists(sourceRoute) && !Directory.Exists(sourceRoute)) 
+            if (!File.Exists(sourceRoute) && !Directory.Exists(sourceRoute))
             {
                 throw new DirectoryNotFoundException($"Путь до архивируемых файлов {sourceRoute} не существует");
             }
+            entries.Add(BuildAcrhiveTree(sourceRoute));
+        }
+        public void Compress(string targetRoute)
+        {
             
-            var zipEntries = BuildAcrhiveTree(sourceRoute);
+       
             var prefixDirectories = Path.GetDirectoryName(targetRoute);
 
             if (prefixDirectories != null && prefixDirectories!="")
@@ -102,7 +106,8 @@ namespace Archivator
             using(var fileOutputStream = File.Create(targetRoute))
             using (var zipOutputStream = new ZipOutputStream(fileOutputStream))
             {
-                Compress(zipEntries, zipOutputStream);
+                foreach(var entry in entries)
+                Compress(entry, zipOutputStream);
             }
         }
 

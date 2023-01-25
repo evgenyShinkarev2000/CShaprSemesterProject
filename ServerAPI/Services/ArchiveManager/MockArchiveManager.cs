@@ -27,7 +27,8 @@ namespace ServerAPI.Services.ArchiveManager
             if (!Directory.Exists(archivePath))
             {
                 var archivator = new Archivator.DefaultArchivator();
-                archivator.Compress(fileManager.GetPathToDirectory(id), Path.Combine(basePath, id));
+                archivator.AddToArchive(fileManager.GetPathToDirectory(id));
+                archivator.Compress(Path.Combine(basePath, id));
             }
 
             return new PhysicalFileInfo(new FileInfo(archivePath));

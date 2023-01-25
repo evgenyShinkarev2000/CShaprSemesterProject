@@ -9,8 +9,8 @@ namespace Archivator
 {
     public interface IArchivator
     {
-        public void Compress(string sourceRoute, string targetRoute);
-       
+        public void Compress(string targetRoute);
+        public void AddToArchive(string sourceRoute);
         public void Decompress(string sourceRoute, string outDirectoryPath);
     }
 }
