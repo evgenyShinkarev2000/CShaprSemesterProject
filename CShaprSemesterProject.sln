@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Archivator", "Archivator\Archivator.csproj", "{09D5F0FE-C51F-41A4-884F-611937C41202}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.Archivator", "Archivator\App.Archivator.csproj", "{09D5F0FE-C51F-41A4-884F-611937C41202}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{96E2431C-6DFC-4A10-BCA3-8DF52D72E00A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.ConsoleUI", "ConsoleUI\Domain.ConsoleUI.csproj", "{96E2431C-6DFC-4A10-BCA3-8DF52D72E00A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{923185DD-C41C-4B5E-A200-4EC89BAF7FD2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerAPI", "ServerAPI\ServerAPI.csproj", "{44721208-274E-4144-8689-3CB79F071477}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.ServerAPI", "ServerAPI\Domain.ServerAPI.csproj", "{44721208-274E-4144-8689-3CB79F071477}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBot", "TelegramBot\TelegramBot.csproj", "{295EB046-0E63-4E72-ABF0-ABC19DA6B95B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain'.TelegramBot", "TelegramBot\Domain'.TelegramBot.csproj", "{295EB046-0E63-4E72-ABF0-ABC19DA6B95B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

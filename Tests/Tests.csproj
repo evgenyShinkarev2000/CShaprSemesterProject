@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Archivator\Archivator.csproj" />
+    <ProjectReference Include="..\Archivator\App.Archivator.csproj" />
   </ItemGroup>
 
 </Project>
