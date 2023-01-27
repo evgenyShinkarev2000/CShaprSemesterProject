@@ -27,10 +27,13 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :--------------------------------------  
 reg add "HKEY_CLASSES_ROOT\*\shell\MyCustomArhivator" /d pack
-reg add "HKEY_CLASSES_ROOT\*\shell\MyCustomArhivator\command" /d C:\projects\CSharp\CShaprSemesterProject\CShaprSemesterProject\bin\Debug\net6.0-windows\CShaprSemesterProject.exe
-reg add "HKEY_CLASSES_ROOT\*\shell\MyCustomArhivator\DefaultIcon" /d C:\projects\CSharp\CShaprSemesterProject\CShaprSemesterProject\bin\Debug\net6.0-windows\CShaprSemesterProject.exe
-reg add HKEY_CLASSES_ROOT\.myrar\shell\MyCustomArhivator /d unpack
-reg add HKEY_CLASSES_ROOT\.myrar\shell\MyCustomArhivator\command /d C:\projects\CSharp\CShaprSemesterProject\CShaprSemesterProject\bin\Debug\net6.0-windows\CShaprSemesterProject.exe
-reg add HKEY_CLASSES_ROOT\.myrar\shell\MyCustomArhivator\DefaultIcon /d C:\projects\CSharp\CShaprSemesterProject\CShaprSemesterProject\bin\Debug\net6.0-windows\CShaprSemesterProject.exe
+reg add "HKEY_CLASSES_ROOT\*\shell\MyCustomArhivator" /v Icon /t REG_SZ /d "%~dp0archive_icon.ico"
+reg add "HKEY_CLASSES_ROOT\*\shell\MyCustomArhivator\command" /d "%~dp0ConsoleUI.exe pack %%1"
 
-::C:\projects\CSharp\CShaprSemesterProject\CShaprSemesterProject\bin\Debug\net6.0-windows\CShaprSemesterProject.exe
+reg add "HKEY_CLASSES_ROOT\.zip\shell\MyCustomArhivator" /d unpack
+reg add "HKEY_CLASSES_ROOT\.zip\shell\MyCustomArhivator\command" /d "%~dp0ConsoleUI.exe -unpack %%1"
+reg add "HKEY_CLASSES_ROOT\.zip\shell\MyCustomArhivator" /v Icon /t REG_SZ /d "%~dp0archive_icon.ico"
+
+reg add HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\MyCustomArhivator /d pack
+reg add HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\MyCustomArhivator\command /d "%~dp0ConsoleUI.exe pack %%1"
+reg add HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\MyCustomArhivator /v Icon /t REG_SZ /d "%~dp0archive_icon.ico"
