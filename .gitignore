@@ -363,7 +363,12 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # Cutom
-ServerAPI\Mocks\
-ConsoleUI\samples\Archives
-ConsoleUI\samples\Decompressed
-ConsoleUI\samples\Sources
+ServerAPI/Mocks/
+ConsoleUI/samples/Archives
+ConsoleUI/samples/Decompressed
+ConsoleUI/samples/Sources
+install_bat/*.dll
+install_bat/*.exe
+install_bat/*.ico
+install_bat/*.json
+
