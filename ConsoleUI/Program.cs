@@ -26,8 +26,8 @@ namespace ConsoleUI
             switch (command)
             {
                 case "pack":
+                    archivator.AddToArchive(path);
                     archivator.Compress(
-                        path,
                         Path.Combine(Path.GetDirectoryName(path)!, Path.GetFileNameWithoutExtension(path) + ".zip"));
                     break;
                 case "unpack":
