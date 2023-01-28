@@ -68,7 +68,7 @@ namespace TelegramBot
         private void DownloadPhoto(PhotoSize[] photo, string id)
         {
             var fileId = photo[photo.Length - 1].FileId;
-            DownloadFile(fileId, fileId, id);
+            DownloadFile(fileId, fileId+".jpg", id);
         }
 
         private void DeleteTempFiles(string id)
